@@ -1,4 +1,4 @@
-grunt-ttime
+grunt-ttime [![Build Status](https://travis-ci.org/hurrymaplelad/grunt-ttime.png)](https://travis-ci.org/hurrymaplelad/grunt-ttime)
 ===========
 
 Record task completion time as mtime of a file.  Use with [grunt-find](https://github.com/hurrymaplelad/grunt-find) to skip files that haven't changed since the last time a task ran.
@@ -7,7 +7,7 @@ Record task completion time as mtime of a file.  Use with [grunt-find](https://g
 npm install --save-dev grunt-ttime
 ```
 
-Run `ttime:foo` to generate a file named `foo` in the ttime directory (`.---grunt/ttime` by default).
+Run `ttime:foo` to generate a file named `foo` in the ttime directory (`.grunt/ttime` by default).
 
 Run `ttime:clear` to remove all the generated files.
 
