@@ -1,6 +1,3 @@
-touch = require 'touch'
-mkdirp = require 'mkdirp'
-rimraf = require 'rimraf'
 pkg = require '../package.json'
 
 module.exports = (grunt) ->
@@ -10,7 +7,6 @@ module.exports = (grunt) ->
     [target] = @args
 
     if target is 'clear'
-      rimraf.sync dest
+      grunt.file.delete dest
     else
-      mkdirp.sync dest
-      touch.sync "#{dest}/#{target}"
+      grunt.file.write "#{dest}/#{target}", new Date()
