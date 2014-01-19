@@ -12,5 +12,5 @@ module.exports = (grunt) ->
     if target is 'clear'
       rimraf.sync dest
     else
-      mkdirp.sync "#{dest}"
+      mkdirp.sync dest
       touch.sync "#{dest}/#{target}"
