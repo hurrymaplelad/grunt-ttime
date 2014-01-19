@@ -6,7 +6,7 @@ module.exports = (grunt) ->
     dest = "#{dest}ttime"
     [target] = @args
 
-    if target is 'clear'
+    if target is 'clear' and grunt.file.exists dest
       grunt.file.delete dest
     else
       grunt.file.write "#{dest}/#{target}", new Date()
